@@ -1,5 +1,6 @@
 .navbar-inverse {
   background-color: darken($color-dark, 4%);
+  margin-bottom: 0;
   .navbar-nav {
     .active {
       a {
@@ -59,4 +60,52 @@
 .navbar-toggle {
   float: none;
   margin-right: 0;
+}
+
+.panel {
+  margin-bottom: $gap * 2;
+
+  border: none;
+  background-color: darken($color-light, 8%);
+
+  &-info > .panel-heading {
+    letter-spacing: 0.1em;
+
+    color: $color-light;
+    border: none;
+    background-color: $color-accent;
+
+    font-size: 1.2rem;
+  }
+
+  &-body {
+    border: 1px solid $color-gray;
+    border-radius: 0 0 4px 4px;
+  }
+}
+
+.input-lg,
+.input-group-lg > .form-control {
+  font-size: 0.875rem;
+}
+
+.user-login {
+  position: relative;
+  &__tabs {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    border: none;
+
+    a {
+      background-color: transparent !important;
+      border: none !important;
+      color: $color-gray;
+      padding: 14px 5px 11px !important;
+    }
+
+    .active a {
+      color: $color-light !important;
+    }
+  }
 }

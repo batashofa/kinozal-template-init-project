@@ -1,5 +1,8 @@
 %text-shadow {
-    text-shadow: 0 0 5px darken($color-dark, 14%), 
-    0 0 10px darken($color-dark, 14%), 
-    0 0 20px darken($color-dark, 14%);
+  text-shadow: 0 0 5px darken($color-dark, 14%),
+    0 0 10px darken($color-dark, 14%), 0 0 20px darken($color-dark, 14%);
+}
+
+%margin-botton-lg {
+  margin-bottom: 80px;
 }
