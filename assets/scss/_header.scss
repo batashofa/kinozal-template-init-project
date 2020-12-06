@@ -1,0 +1,35 @@
+.header {
+  .header-logo {
+    background-color: $color-dark;
+    text-align: center;
+    padding: 100px 0;
+    background-image: url(../../assets/img/header-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    &__title {
+      display: block;
+      color: $color-accent;
+      font-family: $font-header;
+
+      @include xs-min {
+        font-size: 3.5rem;
+        letter-spacing: 0.33em;
+        margin-right: -$gap;
+      }
+      @include xs {
+        font-size: 2.5rem;
+        letter-spacing: 0.2em;
+        margin-right: -($gap / 2);
+      }
+
+      @extend %text-shadow;
+    }
+    &__description {
+      display: block;
+      color: $color-light;
+      font-size: 1.15rem;
+      letter-spacing: 0.2em;
+      @extend %text-shadow;
+    }
+  }
+}
