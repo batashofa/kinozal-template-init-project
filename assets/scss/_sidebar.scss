@@ -2,17 +2,113 @@
   @extend %margin-botton-lg;
   .panel:last-of-type {
     margin-bottom: 0;
-    }
+  }
 }
-
 
 .vertical-slider {
-    overflow: hidden;
-    border-radius: 4px;
-    &__image{
-        width: 100%;
-    }
+  overflow: hidden;
+  border-radius: 4px;
+  &__image {
+    width: 100%;
+  }
 }
 
+.site-news-item {
+  position: relative;
 
+  clear: both;
 
+  &__image {
+    float: left;
+
+    width: 75px;
+    margin: 0 10px 10px 0;
+    transition: background-color 0.25s;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    a {
+      transition: color 0.25s;
+
+      @include block-shortener(1rem, 1.5, 50px, 2);
+    }
+  }
+
+  &__date {
+    text-align: right;
+    font-size: 0.8rem;
+    color: darken($color-gray, 30%);
+  }
+
+  &:hover {
+    a {
+      color: $color-accent;
+    }
+    .site-news-item__image {
+      border-color: $color-accent;
+      background-color: $color-accent;
+    }
+  }
+
+  &:not(:last-child) {
+    min-height: 85px;
+    margin-bottom: $gap;
+    ::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -5px;
+      width: calc(100% - 85px);
+      height: 1px;
+      background-color: $color-gray;
+      background-color: #dddddd;
+    }
+  }
+}
+
+.top-films {
+  &__body {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  &__list {
+    margin-bottom: 0;
+  }
+  &__item {
+    margin-right: -1px;
+    margin-left: -1px;
+    background-color: transparent;
+    color: $color-primary !important;
+
+    
+    @include block-shortener(1rem, 1.5, 50px, 1);
+    
+
+    &:hover,
+    &:focus {
+      background-color: $color-accent !important;
+      color: $color-light !important;
+      border-color: $color-accent; 
+      .badge {
+        background-color: $color-dark;
+      }
+    }
+
+    &:first-child {
+      border-top: none;
+      border-radius: 0;
+    }
+
+    &:last-child {
+      border-bottom: none;
+      border-radius: 0;
+    }
+    &__badge {
+        position: absolute;
+        top: 50%;
+        right: $gap;
+        transform: translateY(-50%);
+      }
+  }
+}
