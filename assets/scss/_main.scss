@@ -1,3 +1,57 @@
 .main {
   @extend %margin-botton-lg;
 }
+
+.site-search {
+  margin-bottom: 45px;
+}
+
+.user-login {
+  margin-bottom: 60px;
+}
+
+.new-films-item__caption,
+.top-week-item__caption {
+  text-align: center;
+  .new-films-item__title,
+  .top-week-item__title {
+    .new-films-item__image,
+    .top-week-item__image {
+      width: 100%;
+      .thumbnail a>img, .thumbnail>img {
+        margin-right: 0;
+        margin-left: 0;
+        width: 100%;
+    }
+    }
+  }
+}
+.new-films {
+  &-row {
+    margin-right: -$gap / 2;
+    margin-bottom: -$gap;
+    margin-left: -$gap / 2;
+  }
+
+  &-item {
+    margin-bottom: $gap;
+    padding-right: $gap / 2;
+    padding-left: $gap / 2;
+
+    &__thumbnail {
+      margin-bottom: 0;
+    }
+
+    &__title {
+      @include text-shortener;
+      display: block;
+      overflow: hidden;
+      margin: 0;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-size: 1rem;
+      font-weight: bold;
+      -o-text-overflow: ellipsis;
+    }
+  }
+}

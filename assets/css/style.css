@@ -128,6 +128,81 @@ a:hover, a:focus {
   letter-spacing: 0.2em;
 }
 
+.site-search {
+  margin-bottom: 45px;
+}
+
+.user-login {
+  margin-bottom: 60px;
+}
+
+.new-films-item__caption,
+.top-week-item__caption {
+  text-align: center;
+}
+
+.new-films-item__caption .new-films-item__title .new-films-item__image,
+.new-films-item__caption .new-films-item__title .top-week-item__image,
+.new-films-item__caption .top-week-item__title .new-films-item__image,
+.new-films-item__caption .top-week-item__title .top-week-item__image,
+.top-week-item__caption .new-films-item__title .new-films-item__image,
+.top-week-item__caption .new-films-item__title .top-week-item__image,
+.top-week-item__caption .top-week-item__title .new-films-item__image,
+.top-week-item__caption .top-week-item__title .top-week-item__image {
+  width: 100%;
+}
+
+.new-films-item__caption .new-films-item__title .new-films-item__image .thumbnail a > img, .new-films-item__caption .new-films-item__title .new-films-item__image .thumbnail > img,
+.new-films-item__caption .new-films-item__title .top-week-item__image .thumbnail a > img,
+.new-films-item__caption .new-films-item__title .top-week-item__image .thumbnail > img,
+.new-films-item__caption .top-week-item__title .new-films-item__image .thumbnail a > img,
+.new-films-item__caption .top-week-item__title .new-films-item__image .thumbnail > img,
+.new-films-item__caption .top-week-item__title .top-week-item__image .thumbnail a > img,
+.new-films-item__caption .top-week-item__title .top-week-item__image .thumbnail > img,
+.top-week-item__caption .new-films-item__title .new-films-item__image .thumbnail a > img,
+.top-week-item__caption .new-films-item__title .new-films-item__image .thumbnail > img,
+.top-week-item__caption .new-films-item__title .top-week-item__image .thumbnail a > img,
+.top-week-item__caption .new-films-item__title .top-week-item__image .thumbnail > img,
+.top-week-item__caption .top-week-item__title .new-films-item__image .thumbnail a > img,
+.top-week-item__caption .top-week-item__title .new-films-item__image .thumbnail > img,
+.top-week-item__caption .top-week-item__title .top-week-item__image .thumbnail a > img,
+.top-week-item__caption .top-week-item__title .top-week-item__image .thumbnail > img {
+  margin-right: 0;
+  margin-left: 0;
+  width: 100%;
+}
+
+.new-films-row {
+  margin-right: -7.5px;
+  margin-bottom: -15px;
+  margin-left: -7.5px;
+}
+
+.new-films-item {
+  margin-bottom: 15px;
+  padding-right: 7.5px;
+  padding-left: 7.5px;
+}
+
+.new-films-item__thumbnail {
+  margin-bottom: 0;
+}
+
+.new-films-item__title {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+  font-weight: bold;
+  -o-text-overflow: ellipsis;
+}
+
 .left-sidebar .panel:last-of-type {
   margin-bottom: 0;
 }
