@@ -1,0 +1,76 @@
+.main {
+  .film-info {
+    position: relative;
+    overflow: hidden;
+    .film-info-title {
+    }
+  }
+
+  .film-info__well {
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    .film-info__wrapper {
+      .film-info__badge {
+      }
+    }
+  }
+
+  .film-description {
+    position: relative;
+    overflow: hidden;
+    .film-description-title {
+    }
+    .well {
+      border-color: #dddddd;
+      background-color: #f1f1f1;
+      border-color: #dddddd;
+    background-color: #f1f1f1;
+    }
+  }
+
+  .film-comments {
+    .film-comments-title {
+    }
+    .panel {
+      margin-bottom: 30px;
+      border: none;
+      background-color: #ebebeb;
+      .panel-heading,
+      .panel-info {
+        letter-spacing: 0.1em;
+        color: #ffffff;
+        border: none;
+        background-color: #df8a13;
+        font-size: 1.2rem;
+        .glyphicon {
+          position: relative;
+          top: 1px;
+          display: inline-block;
+          font-family: "Glyphicons Halflings";
+          font-style: normal;
+          font-weight: 400;
+          line-height: 1;
+          span {
+          }
+        }
+      }
+      .panel-body {
+        border: 1px solid #dddddd;
+        border-radius: 0 0 4px 4px;
+      }
+    }
+  }
+
+  .film-comment-form {
+    position: relative;
+    overflow: hidden;
+    .film-comment-title {
+      form {
+        .form-group {
+        }
+      }
+    }
+  }
+}
