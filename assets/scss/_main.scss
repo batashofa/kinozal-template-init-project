@@ -1,57 +1,95 @@
 .main {
   @extend %margin-botton-lg;
-}
 
-.site-search {
-  margin-bottom: 45px;
-}
+  .site-search {
+    margin-bottom: 45px;
+  }
 
-.user-login {
-  margin-bottom: 60px;
-}
+  .user-login {
+    margin-bottom: 60px;
+  }
 
-.new-films-item__caption,
-.top-week-item__caption {
-  text-align: center;
-  .new-films-item__title,
-  .top-week-item__title {
-    .new-films-item__image,
-    .top-week-item__image {
+  .new-films,
+  .top-week,
+  .movie-news,
+  .film-news {
+    position: relative;
+    overflow: hidden;
+    &-title::after {
+      position: absolute;
       width: 100%;
-      .thumbnail a>img, .thumbnail>img {
-        margin-right: 0;
-        margin-left: 0;
+      margin: 0.85em 0 0 15px;
+      content: "";
+      border-bottom: 3px solid rgba(240, 173, 79, 0.7);
+    }
+    h2::before {
+      position: absolute;
+      left: 0;
+      width: 30px;
+      margin: 0.25em 0 0 0;
+      content: "";
+      border-bottom: 3px solid rgba(240, 173, 79, 0.7);
+  }
+    &-row {
+      margin-right: -$gap / 2;
+      margin-bottom: -$gap;
+      margin-left: -$gap / 2;
+    }
+
+    &-item {
+      margin-bottom: $gap;
+      padding-right: $gap / 2;
+      padding-left: $gap / 2;
+
+      
+
+      &__image {
         width: 100%;
-    }
+      }
+      &__thumbnail {
+        margin-bottom: 0;
+      }
+
+      &__caption {
+        text-align: center;
+      }
+
+      &__title {
+        @include text-shortener;
+        display: block;
+        overflow: hidden;
+        margin: 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: 1rem;
+        font-weight: bold;
+        -o-text-overflow: ellipsis;
+      }
     }
   }
-}
-.new-films {
-  &-row {
-    margin-right: -$gap / 2;
-    margin-bottom: -$gap;
-    margin-left: -$gap / 2;
-  }
 
-  &-item {
-    margin-bottom: $gap;
-    padding-right: $gap / 2;
-    padding-left: $gap / 2;
 
-    &__thumbnail {
-      margin-bottom: 0;
-    }
 
-    &__title {
-      @include text-shortener;
-      display: block;
-      overflow: hidden;
-      margin: 0;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      font-size: 1rem;
-      font-weight: bold;
-      -o-text-overflow: ellipsis;
+  .film-news {
+    .film-news-item {
+      padding: 0;
+      .row {
+        margin-right: -15px;
+        margin-left: -15px;
+
+        &::before,
+        &::after {
+          clear: both;
+        }
+        .film-news-text {
+          text-align: justify;
+        }
+      .film-news-item__button {
+        float: right;
+        transition: background-color 0.25s;
+        margin: 0 0 30px 0;
+      }
+      }
     }
   }
 }

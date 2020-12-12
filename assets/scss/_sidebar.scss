@@ -3,7 +3,8 @@
   .panel:last-of-type {
     margin-bottom: 0;
   }
-}
+  
+
 
 .vertical-slider {
   overflow: hidden;
@@ -11,6 +12,14 @@
   &__image {
     width: 100%;
   }
+}
+
+.site-search {
+  margin-bottom: 30px;
+}
+.user-login {
+  margin-bottom: 30px;
+}
 }
 
 .site-news-item {
@@ -78,22 +87,10 @@
   &__item {
     margin-right: -1px;
     margin-left: -1px;
-    background-color: transparent;
+    padding-right: 55px;
+
     color: $color-primary !important;
-
-    
-    @include block-shortener(1rem, 1.5, 50px, 1);
-    
-
-    &:hover,
-    &:focus {
-      background-color: $color-accent !important;
-      color: $color-light !important;
-      border-color: $color-accent; 
-      .badge {
-        background-color: $color-dark;
-      }
-    }
+    background-color: transparent;
 
     &:first-child {
       border-top: none;
@@ -104,11 +101,25 @@
       border-bottom: none;
       border-radius: 0;
     }
-    &__badge {
-        position: absolute;
-        top: 50%;
-        right: $gap;
-        transform: translateY(-50%);
+
+    &:hover,
+    &:focus {
+      color: $color-light !important;
+      border-color: $color-accent;
+      background-color: $color-accent !important;
+
+      .badge {
+        background-color: $color-dark;
       }
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: 50%;
+    right: $gap;
+
+    transform: translateY(-50%);
   }
 }
+
