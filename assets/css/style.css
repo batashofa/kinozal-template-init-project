@@ -263,64 +263,100 @@ a {
   margin: 0 0 30px 0;
 }
 
-.main .film-info {
+.film-info {
   position: relative;
   overflow: hidden;
 }
 
-.main .film-info__well {
-  position: relative;
-  overflow: hidden;
+.film-info .embed-responsive {
+  border: 1px solid #dddddd;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+}
+
+.film-info .embed-responsive .embed-responsive-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.film-info__well {
+  text-align: center;
+  font-size: 1.2em;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  border-color: #dddddd;
+  background-color: #f1f1f1;
 }
 
-.main .film-description {
+.film-info__wrapper:not(:last-of-type) {
+  margin-right: 15px;
+}
+
+.film-info__badge {
+  font-size: 0.8em;
+}
+
+.film-description {
   position: relative;
   overflow: hidden;
 }
 
-.main .film-description .well {
+.film-description .well {
   border-color: #dddddd;
   background-color: #f1f1f1;
   border-color: #dddddd;
   background-color: #f1f1f1;
 }
 
-.main .film-comments .panel {
+.film-comments {
+  position: relative;
+  overflow: hidden;
+}
+
+.film-comments .panel {
   margin-bottom: 30px;
   border: none;
   background-color: #ebebeb;
 }
 
-.main .film-comments .panel .panel-heading,
-.main .film-comments .panel .panel-info {
-  letter-spacing: 0.1em;
-  color: #ffffff;
-  border: none;
-  background-color: #df8a13;
-  font-size: 1.2rem;
-}
-
-.main .film-comments .panel .panel-heading .glyphicon,
-.main .film-comments .panel .panel-info .glyphicon {
-  position: relative;
-  top: 1px;
-  display: inline-block;
-  font-family: "Glyphicons Halflings";
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1;
-}
-
-.main .film-comments .panel .panel-body {
+.film-comments .panel .panel-body {
   border: 1px solid #dddddd;
   border-radius: 0 0 4px 4px;
 }
 
-.main .film-comment-form {
+.film-comment-form {
   position: relative;
   overflow: hidden;
+}
+
+.film-comment-form form {
+  display: block;
+  margin-top: 0em;
+}
+
+.film-comment-form form .form-group {
+  margin-bottom: 15px;
+}
+
+.film-comment-form form .form-group .form-control {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.film-comment-form form .form-group .film-comment-form__button {
+  float: right;
 }
 
 .left-sidebar .panel:last-of-type {
