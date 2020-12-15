@@ -6,15 +6,17 @@
       a {
         background-color: $color-primary-dark;
         transition: background-color 0, 5s;
-      }
-      &:focus,
-      &:hover {
-        background-color: $color-primary-light;
+
+        &:focus,
+        &:hover {
+          background-color: $color-primary-light;
+        }
       }
     }
 
     li {
       a {
+        border-radius: 4px;
         transition: background-color 0, 5s;
         @include sm-min {
           border-radius: 4px;
@@ -23,7 +25,10 @@
           text-align: center;
         }
       }
-      &:hover,
+      &:hover {
+        background-color: #517ba2;
+        border-radius: 4px;
+      }
       &:focus {
         background-color: $color-primary;
       }
@@ -47,11 +52,13 @@
     li {
       margin: 5px 0 5px 5px;
     }
+  }
     @include sm {
       margin-top: 0;
     }
   }
-}
+
+
 
 .navbar-header {
   text-align: center;

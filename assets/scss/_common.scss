@@ -57,5 +57,9 @@ h2 {
 
 a {
   color: $color-primary;
+  
+  &:hover {
+    text-decoration: none;
+  }
 
 }
