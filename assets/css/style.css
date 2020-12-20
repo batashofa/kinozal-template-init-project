@@ -13,9 +13,9 @@
 
 .navbar-inverse .navbar-nav .active a {
   background-color: #053159;
-  -webkit-transition: background-color 0, 5s;
-  -o-transition: background-color 0, 5s;
-  transition: background-color 0, 5s;
+  -webkit-transition: background-color 0,5s;
+  -o-transition: background-color 0,5s;
+  transition: background-color 0,5s;
 }
 
 .navbar-inverse .navbar-nav .active a:focus, .navbar-inverse .navbar-nav .active a:hover {
@@ -221,6 +221,9 @@ a:hover {
 .main .movie-news-item__thumbnail,
 .main .film-news-item__thumbnail {
   margin-bottom: 0;
+  -webkit-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
 }
 
 .main .new-films-item__thumbnail:hover,
@@ -231,9 +234,13 @@ a:hover {
 }
 
 .main .new-films-item__thumbnail:hover .new-films-item__title,
+.main .new-films-item__thumbnail:hover .top-week-item__title,
 .main .top-week-item__thumbnail:hover .new-films-item__title,
+.main .top-week-item__thumbnail:hover .top-week-item__title,
 .main .movie-news-item__thumbnail:hover .new-films-item__title,
-.main .film-news-item__thumbnail:hover .new-films-item__title {
+.main .movie-news-item__thumbnail:hover .top-week-item__title,
+.main .film-news-item__thumbnail:hover .new-films-item__title,
+.main .film-news-item__thumbnail:hover .top-week-item__title {
   color: #ffffff;
 }
 
@@ -248,10 +255,12 @@ a:hover {
 .main .top-week-item__title,
 .main .movie-news-item__title,
 .main .film-news-item__title {
+  color: #232323;
   display: block;
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   display: block;
   overflow: hidden;
   margin: 0;
@@ -259,28 +268,48 @@ a:hover {
   text-overflow: ellipsis;
   font-size: 1rem;
   font-weight: bold;
-  -o-text-overflow: ellipsis;
 }
 
-.main .film-news .film-news-item {
+.film-news .film-news-item {
   padding: 0;
   margin: 0;
+  -webkit-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
 }
 
-.main .film-news .film-news-item .row {
+.film-news .film-news-item:hover h3 a {
+  color: #df8a13;
+}
+
+.film-news .film-news-item:hover .film-news-item__thumbnail {
+  background-color: #df8a13;
+}
+
+.film-news .film-news-item:hover .film-news-item__button {
+  background-color: #df8a13;
+}
+
+.film-news .film-news-item .row {
   margin-right: -15px;
   margin-left: -15px;
 }
 
-.main .film-news .film-news-item .row::before, .main .film-news .film-news-item .row::after {
+.film-news .film-news-item .row::before, .film-news .film-news-item .row::after {
   clear: both;
 }
 
-.main .film-news .film-news-item .row .film-news-text {
+.film-news .film-news-item .row .film-news-item__thumbnail {
+  -webkit-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.film-news .film-news-item .row .film-news-text {
   text-align: justify;
 }
 
-.main .film-news .film-news-item .row .film-news-item__button {
+.film-news .film-news-item .row .film-news-item__button {
   float: right;
   -webkit-transition: background-color 0.25s;
   -o-transition: background-color 0.25s;
@@ -316,6 +345,10 @@ a:hover {
   border-top-right-radius: 0;
   border-color: #dddddd;
   background-color: #f1f1f1;
+}
+
+.film-info__wrapper {
+  white-space: nowrap;
 }
 
 .film-info__wrapper:not(:last-of-type) {
@@ -385,7 +418,7 @@ a:hover {
 }
 
 .left-sidebar .panel:last-of-type {
-  margin-bottom: 0;
+  margin-bottom: 30px;
 }
 
 .left-sidebar .vertical-slider {
@@ -601,7 +634,14 @@ a:hover {
 @media (max-width: 575.8px) {
   h1 {
     font-size: 2rem;
-    margin: 0 0 45px;
+    margin: 0 0 30px;
+  }
+  h2 {
+    margin: 45px 0 30px 45px;
+    font-size: 1.75rem;
+  }
+  h3 {
+    font-size: 1.25rem;
   }
   .header .header-logo__title {
     font-size: 2.5rem;
