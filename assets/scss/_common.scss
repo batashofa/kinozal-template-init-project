@@ -4,8 +4,11 @@
 html {
   font-size: $font-size;
   overflow-y: scroll;
+  overflow-x: hidden;
+  // touch-action: manipulation;
 }
 body {
+  
   font-family: $font-main;
   font-size: $font-size;
 }
